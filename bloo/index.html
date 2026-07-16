@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Blood Donation System</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+<header>
+<h1>🩸 Blood Donation System</h1>
+</header>
+
+<div class="container">
+
+<!-- REGISTER -->
+<div class="card">
+<h2>Register Donor</h2>
+
+<input id="name" placeholder="Enter Name">
+<input id="group" placeholder="Blood Group (A+, B+, O+...)">
+<input id="phone" placeholder="Phone Number">
+
+<button onclick="registerDonor()">Register</button>
+<p id="msg"></p>
+</div>
+
+<!-- FIND DONOR -->
+<div class="card">
+<h2>Find Donor</h2>
+
+<select id="blood">
+<option>A+</option>
+<option>B+</option>
+<option>O+</option>
+<option>AB+</option>
+<option>A-</option>
+<option>B-</option>
+<option>O-</option>
+<option>AB-</option>
+</select>
+
+<button onclick="findDonor()">Search</button>
+<p id="result"></p>
+</div>
+
+<!-- ELIGIBILITY -->
+<div class="card">
+<h2>Eligibility Checker</h2>
+
+<input id="age" placeholder="Enter Age">
+<input id="weight" placeholder="Enter Weight">
+
+<button onclick="checkEligibility()">Check</button>
+<p id="eligibility"></p>
+</div>
+
+<!-- MAP -->
+<div class="card">
+<h2>📍 Donor Map</h2>
+<div id="map"></div>
+</div>
+
+<!-- CHATBOT -->
+<div class="card">
+<h2>🤖 Chat Assistant</h2>
+
+<div id="chatArea"></div>
+
+<input id="chatinput" placeholder="Ask something...">
+<button onclick="sendChat()">Send</button>
+
+<div class="quickBtns">
+
+<button onclick="quick(1)">What is blood donation?</button>
+<button onclick="quick(2)">How to register?</button>
+<button onclick="quick(3)">Who can donate?</button>
+<button onclick="quick(4)">Minimum age?</button>
+<button onclick="quick(5)">Minimum weight?</button>
+<button onclick="quick(6)">Is it safe?</button>
+<button onclick="quick(7)">Find donor</button>
+<button onclick="quick(8)">Blood groups</button>
+<button onclick="quick(9)">Donation frequency</button>
+<button onclick="quick(10)">Emergency help</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
